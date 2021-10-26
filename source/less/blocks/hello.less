@@ -68,6 +68,7 @@
 .hello__pic {
   position: relative;
   height: 100%;
+  max-width: 575px;
   flex-grow: 1;
   display: flex;
   justify-content: center;
@@ -79,12 +80,29 @@
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 575px;
+    width: 100%;
     height: 575px;
     border-radius: 50%;
     border: 67px solid #00C4F0;
     box-sizing: border-box;
     filter: drop-shadow(0px 0px 152px rgba(0, 196, 240, 0.42));
+  }
+}
+
+.hello__img-scills {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: linear-gradient(130.68deg, #414141 0%, #2D2D2D 100.52%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &--one {
+    z-index: 1;
+    position: absolute;
+    top: 25%;
+    left: 3%;
   }
 }
 
