@@ -18,7 +18,7 @@
 .hello__info {
   z-index: 2;
   width: 350px;
-  height: 377px;
+  //height: 377px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -104,12 +104,27 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1;
+  position: absolute;
 
   &--one {
-    z-index: 1;
-    position: absolute;
     top: 20%;
     left: -5%;
+  }
+
+  &--two {
+    top: 45%;
+    left: -25%;
+  }
+
+  &--thre {
+    top: 70%;
+    left: -20%;
+  }
+
+  &--four {
+    left: 80%;
+    top: 20%;
   }
 }
 
