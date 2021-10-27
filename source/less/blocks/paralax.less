@@ -11,28 +11,32 @@
 
   background-image: url('../../img/paralax/paralax--hello-to-stack.jpg');
 
-  &::before {
-
-  }
-
-  &::after {
-    content: '';
-    bottom: -1px;
-    left: 0;
-    position: absolute;
-    width: 100%;
-    height: 75px;
-    background: linear-gradient(0deg, rgba(65,65,65,1) 0%, rgba(65, 65, 65, 0) 100%);
-  }
-
   &--hello-to-stack {
-
+    &::after {
+      content: '';
+      bottom: -1px;
+      left: 0;
+      position: absolute;
+      width: 100%;
+      height: 75px;
+      background: linear-gradient(0deg, rgba(65,65,65,1) 0%, rgba(65, 65, 65, 0) 100%);
+    }
   }
 }
 
+.paralax__blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(3px);
+}
+
 .paralax__title {
+  z-index: 1;
   font-weight: bold;
-  font-size: 28px;
+  font-size: 34px;
   color: @hello-text-color;
   text-transform: uppercase;
   font-family: 'Roboto Mono', monospace;
