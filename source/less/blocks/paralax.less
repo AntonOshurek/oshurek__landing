@@ -1,0 +1,58 @@
+.paralax {
+  height: 30vh;
+  position: relative;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-image: url('../../img/paralax/paralax--hello-to-stack.jpg');
+
+  &--hello-to-stack,
+  &--hello-about-me {
+    &::after {
+      content: '';
+      bottom: -1px;
+      left: 0;
+      position: absolute;
+      width: 100%;
+      height: 75px;
+      background: linear-gradient(0deg, rgba(65,65,65,1) 0%, rgba(65, 65, 65, 0) 100%);
+    }
+  }
+
+  &--hello-about-me {
+    &::before {
+      content: '';
+      top: -1px;
+      left: 0;
+      position: absolute;
+      width: 100%;
+      height: 75px;
+      background: linear-gradient(0deg, rgba(65,65,65,1) 0%, rgba(65, 65, 65, 0) 100%);
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.paralax__blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(3px);
+}
+
+.paralax__title {
+  z-index: 1;
+  font-weight: bold;
+  font-size: 34px;
+  color: @hello-text-color;
+  text-transform: uppercase;
+  font-family: 'Roboto Mono', monospace;
+  line-height: 21px;
+}

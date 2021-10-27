@@ -1,0 +1,123 @@
+.about-me {
+  width: 100%;
+  height: min-content;
+  padding: 100px 20px;
+  background-color: #414141;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-me__wrap {
+  display: grid;
+  grid-template-columns: repeat(3, min-content);
+  justify-content: center;
+}
+
+.about-me__article {
+  z-index: 2;
+  position: relative;
+  order: 2;
+  width: 370px;
+  height: 100%;
+  background: #2C2C2C;
+  border-radius: 14px;
+  padding: 30px 40px;
+}
+
+.about-me__title {
+  position: absolute;
+  left: 10px;
+  top: -25px;
+  z-index: 2;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 54px;
+  color: #E4E4E4;
+}
+
+.about-me__text {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 24px;
+  color: @standart-white;
+}
+
+.about-me__pic {
+  height: 100%;
+
+  &--double {
+    z-index: 1;
+    position: relative;
+    order: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-right: -30px;
+    margin-top: -30px;
+
+    &::after {
+      z-index: -1;
+      position: absolute;
+      content: '';
+      width: 400px;
+      height: 600px;
+      left: -80px;
+      top: 50px;
+      border-radius: 50%;
+      border: 89px solid #E4E4E4;
+      filter: drop-shadow(0px 4px 70px rgba(255, 255, 255, 0.25));
+    }
+  }
+
+  &--solo {
+    //position: relative;
+    margin-left: -30px;
+    order: 3;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.about-me__img-wrap {
+  padding: 20px;
+  background: #2C2C2C;
+  border-radius: 14px;
+  position: relative;
+  z-index: 1;
+
+  &--solo {
+
+    &::before {
+      z-index: -1;
+      position: absolute;
+      content: '';
+      width: 200px;
+      height: 200px;
+      right: 0;
+      top: -100px;
+      border-radius: 50%;
+      border: 55px solid #00C4F0;
+      box-sizing: border-box;
+      filter: drop-shadow(0px 4px 70px rgba(0, 193, 236, 0.25));
+    }
+  }
+}
+
+.about-me__img {
+  object-fit: cover;
+
+  &--double {
+    width: 120px;
+    height: 200px;
+  }
+
+  &--solo {
+    width: 210px;
+    height: 360px;
+  }
+}
