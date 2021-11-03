@@ -150,11 +150,11 @@
           </p>
         </article>
         <div class="about-me__pic about-me__pic--double">
-          <div class="about-me__img-wrap">
-            <img class="about-me__img about-me__img--double" width="120" height="200" src="img/about-me/Logo__main.jpg" alt="">
+          <div class="about-me__img-wrap about-me__img-wrap--double">
+            <img class="about-me__img about-me__img--double" width="200" height="200" src="img/about-me/Logo__main.jpg" alt="">
           </div>
-          <div class="about-me__img-wrap">
-            <img class="about-me__img about-me__img--double" width="120" height="200" src="img/about-me/Logo__main.jpg" alt="">
+          <div class="about-me__img-wrap about-me__img-wrap--double">
+            <img class="about-me__img about-me__img--double" width="200" height="200" src="img/about-me/Logo__main.jpg" alt="">
           </div>
         </div>
         <div class="about-me__pic about-me__pic--solo">
@@ -164,9 +164,86 @@
         </div>
       </div>
     </section>
+    <div class="paralax paralax--portfolio">
+      <div class="paralax__blur"></div>
+      <p class="paralax__title" aria-hidden="true">Portfolio</p>
+    </div>
+    <section class="portfolio">
+      <div class="portfolio__wrap container">
+        <h2 class="visually-hidden">Portfolio</h2>
+        <div class="sliderfull__wrap">
+          <div class="slederfull-controls">
+            <span class="slederfull-controls__total slederfull-controls__total--current" aria-label="current element">01</span>
+            <span class="slederfull-controls__total slederfull-controls__total--total" aria-label="total elements">04</span>
+          </div>
+          <button class="sliderfull__button sliderfull__button--next" type="button"><span class="visually-hidden">right</span>
+            <svg class="sliderfull__button-img" aria-hidden="true" focusable="false" width="22" height="40" viewBox="0 0 22 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2.07568 39.0585L0.0775051 37.0107L17.0931 19.5639L0.0220261 2.06243L2.02116 0.0146294L21.0894 19.5639L2.07568 39.0585Z" fill="white"/>
+            </svg>
+          </button>
+          <button class="sliderfull__button sliderfull__button--prev" type="button"><span class="visually-hidden">left</span>
+            <svg class="sliderfull__button-img" aria-hidden="true" focusable="false" width="22" height="40" viewBox="0 0 22 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19.9244 0.941467L21.9225 2.98927L4.90696 20.4361L21.978 37.9376L19.9789 39.9854L0.910614 20.4361L19.9244 0.941467Z" fill="white"/>
+            </svg>
+          </button>
+          <ul class="sliderfull-indicators">
+            <!--elements added dynamically from javascript-->
+          </ul>
+          <div class="sliderfull-items">
+            <div class="sliderfull-items__inner">
+              <div class="sliderfull-items__item">
+                <p class="sliderfull-items__text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Donec ut orci eu elit consequat posuere ut sed elit.
+                  Nulla et tristique felis. Morbi quis orci non purus blandit fringilla.
+                  Etiam et mollis eros. Duis venenatis vulputate lacus, non tristique eros placerat vel.
+                  Nam nec magna lacus. Etiam euismod egestas mauris nec mollis.
+                  Phasellus efficitur et ex vel condimentum. Cras enim purus, tempor sed massa
+                  <br>
+                  <a class="sliderfull-items__project-link" href="#">more...</a>
+                </p>
+                <picture>
+                  <source srcset="img/paralax/paralax--hello-to-stack.webp"
+                          type="image/webp">
+                  <img class="sliderfull-items__img" width="500px" height="300px"
+                    src="img/paralax/paralax--hello-to-stack.jpg"
+                    alt="slide 1">
+                </picture>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+  <div class="paralax paralax--footer">
+    <div class="paralax__blur"></div>
+    <p class="paralax__title" aria-hidden="true">Contact Info</p>
+  </div>
   <footer class="footer">
-
+    <div class="footer__wrap container">
+      <div class="footer-navigation">
+        <a class="footer-navigation__link" href="#">Home</a>
+        <a class="footer-navigation__link" href="#">About Me</a>
+        <a class="footer-navigation__link" href="#">Portfolio</a>
+        <a class="footer-navigation__link" href="#">Contact</a>
+      </div>
+      <div class="footer-contact">
+        <h2 class="footer-contact__title">Contact:</h2>
+        <a class="footer-contact__link" href="oshurekweb@gmail.com">Email: oshurekweb@gmail.com</a>
+        <a class="footer-contact__link" href="https://www.instagram.com/ooshurek/">instagram ooshurek</a>
+        <a class="footer-contact__link" href="tel:+48575999829">Calls: +48 575 - 999 - 829</a>
+      </div>
+      <div class="footer-copyright">
+        <button class="footer-copyright__button-top" type="button">
+          <span class="visually-hidden">to top</span>
+          <svg class="footer-copyright__button-icon" aria-hidden="true" focusable="false" width="22" height="40" viewBox="0 0 22 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2.07568 39.0585L0.0775051 37.0107L17.0931 19.5639L0.0220261 2.06243L2.02116 0.0146294L21.0894 19.5639L2.07568 39.0585Z" fill="white"/>
+          </svg>
+        </button>
+        <p class="footer-copyright__text">Copyright © 2021, Anton Oshurek</p>
+      </div>
+    </div>
   </footer>
   <script src="js/bundle.js"></script>
 </body>
