@@ -78,6 +78,7 @@ grid-column-gap: 20px;
   }
 }
 
+//slider items and here inners
 .sliderfull-items {
   width: 100%;
   overflow: hidden;
@@ -159,11 +160,20 @@ grid-column-gap: 20px;
 }
 
 .sliderfull-items__item {
-  text-align: center;
+  //text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sliderfull-items__text {
+  margin-left: 40px;
 }
 
 .sliderfull-items__img {
-  width: 300px;
+  width: 400px;
   height: 300px;
   object-fit: cover;
 
