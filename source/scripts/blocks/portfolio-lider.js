@@ -34,17 +34,15 @@ export default function portfolioSlider() {
 
   const createIndicatorBtn = () => {
     const sliderIndicatorBlock = document.querySelector('.sliderfull-indicators');
-    let element = '';
+    const indicators = document.querySelector('#indicator');
+    const fragment = new DocumentFragment();
 
     for(let i = 0; i < slides.length; i++) {
-      element += `
-        <li class="sliderfull-indicators__item">
-          <button class="sliderfull-indicators__button" data-slide-index = "${i + 1}"></button>
-        </li>
-      `;
-
-      sliderIndicatorBlock.innerHTML = element;
+      const templateItem = indicators.content.cloneNode(true);
+      templateItem.querySelector('.sliderfull-indicators__button').setAttribute('data-slide-index', i + 1);
+      fragment.append(templateItem);
     }
+    sliderIndicatorBlock.append(fragment);
   };
   createIndicatorBtn();
 
