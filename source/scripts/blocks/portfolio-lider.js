@@ -1,99 +1,102 @@
 export default function portfolioSlider() {
-    //btn
-    const sliderBtnPrev = document.querySelector('.sliderfull__button--prev');
-    const sliderBtnNext = document.querySelector('.sliderfull__button--next');
-    //slides counter
-    const sliderCounterCurrent = document.querySelector('.slederfull-controls__total--current');
-    const sliderCounterTotal = document.querySelector('.slederfull-controls__total--total');
-    //slides wrpper
-    const slidesWrapper = document.querySelector('.sliderfull-items');
-    const slidesField = document.querySelector('.sliderfull-items__inner');
-    //all sledes
-    const slides = document.querySelectorAll('.sliderfull-items__item');
+  //btn
+  const sliderBtnPrev = document.querySelector('.sliderfull__button--prev');
+  const sliderBtnNext = document.querySelector('.sliderfull__button--next');
+  //slides counter
+  const sliderCounterCurrent = document.querySelector('.slederfull-controls__total--current');
+  const sliderCounterTotal = document.querySelector('.slederfull-controls__total--total');
+  //slides wrpper
+  const slidesWrapper = document.querySelector('.sliderfull-items');
+  const slidesField = document.querySelector('.sliderfull-items__inner');
+  //all sledes
+  const slides = document.querySelectorAll('.sliderfull-items__item');
 
-    let slideIndex = 1;
-    let offset = 0;
-    const width = window.getComputedStyle(slidesWrapper).width;
+  sliderCounterTotal.textContent = slides.length;
 
-    slides.forEach(slide => {
-      slide.style.width = width;
-    });
+  const getZero = (num) => {
+    if (num >= 0 && num < 10) {
+      return `0${num}`;
+    } else {
+      return num;
+    }
+  };
 
-    slidesField.style.width = 100 * slides.length + '%';
+  let slideIndex = 1;
+  let offset = 0;
+  const width = window.getComputedStyle(slidesWrapper).width;
 
-    function getZero (num) {
-      if (num >= 0 && num < 10) {
-          return `0${num}`;
-      } else {
-          return num;
-      }
-    };
+  slides.forEach(slide => {
+    slide.style.width = width;
+  });
 
+  slidesField.style.width = 100 * slides.length + '%';
+
+  const createIndicatorBtn = () => {
     const sliderIndicatorBlock = document.querySelector('.sliderfull-indicators');
-    function createIndicatorBtn() {
-      let element = '';
+    let element = '';
 
-      for(let i = 0; i < slides.length; i++) {
-        element += `
-          <li class="sliderfull-indicators__item">
-            <button class="sliderfull-indicators__button" data-slide-index = "${i + 1}"></button>
-          </li>
-        `;
+    for(let i = 0; i < slides.length; i++) {
+      element += `
+        <li class="sliderfull-indicators__item">
+          <button class="sliderfull-indicators__button" data-slide-index = "${i + 1}"></button>
+        </li>
+      `;
 
-        sliderIndicatorBlock.innerHTML = element;
-      }
-    };
-    createIndicatorBtn();
+      sliderIndicatorBlock.innerHTML = element;
+    }
+  };
+  createIndicatorBtn();
 
-    const indicatorsBtn = document.querySelectorAll('.sliderfull-indicators__button');
-    indicatorsBtn.forEach(btn => {
-      btn.addEventListener('click', selectbtn);
-    });
+  const indicatorsBtn = document.querySelectorAll('.sliderfull-indicators__button');
+  indicatorsBtn.forEach(btn => {
+    btn.addEventListener('click', selectbtn);
+  });
 
-    function selectbtn() {
-      let atribute = this.getAttribute('data-slide-index');
-      slideIndex = atribute;
+  function selectbtn() {
+    let atribute = this.getAttribute('data-slide-index');
+    slideIndex = atribute;
 
-      offset = +width.slice(0, width.length - 2) * (atribute - 1);
-      slidesField.style.transform = `translate(-${offset}px)`;
+    offset = +width.slice(0, width.length - 2) * (atribute - 1);
+    slidesField.style.transform = `translate(-${offset}px)`;
 
-      showCurrentNumber();
-    };
-
-    function showCurrentNumber() {
-      if (slideIndex > slides.length) slideIndex = 1;
-      if (slideIndex < 1) slideIndex = slides.length;
-      sliderCounterCurrent.innerHTML = getZero(slideIndex);
-
-      indicatorsBtn.forEach(btn => {
-        btn.classList.remove('sliderfull-indicators__button--active');
-      });
-      indicatorsBtn[slideIndex - 1].classList.add('sliderfull-indicators__button--active');
-    };
     showCurrentNumber();
+  };
 
-    sliderBtnNext.addEventListener('click', () => {
-      if (offset == +width.slice(0, width.length - 2) * (slides.length - 1)) {
-        offset = 0;
-      } else {
-        offset += +width.slice(0, width.length - 2);
-      }
-      slideIndex++;
+  function showCurrentNumber() {
+    if (slideIndex > slides.length) slideIndex = 1;
+    if (slideIndex < 1) slideIndex = slides.length;
+    sliderCounterCurrent.innerHTML = getZero(slideIndex);
 
-      slidesField.style.transform = `translate(-${offset}px)`;
-      showCurrentNumber();
+    indicatorsBtn.forEach(btn => {
+      btn.classList.remove('sliderfull-indicators__button--active');
     });
+    indicatorsBtn[slideIndex - 1].classList.add('sliderfull-indicators__button--active');
+  };
+  showCurrentNumber();
 
-    sliderBtnPrev.addEventListener('click', () => {
-      if (offset == 0) {
-        offset = +width.slice(0, width.length - 2) * (slides.length - 1);
-      } else {
-        offset -= +width.slice(0, width.length - 2);
-      }
-      slideIndex--;
+  //slider buttons listeners
+  sliderBtnNext.addEventListener('click', () => {
+    if (offset == +width.slice(0, width.length - 2) * (slides.length - 1)) {
+      offset = 0;
+    } else {
+      offset += +width.slice(0, width.length - 2);
+    }
+    slideIndex++;
 
-      slidesField.style.transform = `translate(-${offset}px)`;
-      showCurrentNumber();
-    });
+    slidesField.style.transform = `translate(-${offset}px)`;
+    showCurrentNumber();
+  });
+
+  sliderBtnPrev.addEventListener('click', () => {
+    if (offset == 0) {
+      offset = +width.slice(0, width.length - 2) * (slides.length - 1);
+    } else {
+      offset -= +width.slice(0, width.length - 2);
+    }
+    slideIndex--;
+
+    slidesField.style.transform = `translate(-${offset}px)`;
+    showCurrentNumber();
+  });
 
 };
