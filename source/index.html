@@ -31,23 +31,26 @@
       <nav class="navigation">
         <ul class="navigation__list">
           <li class="navigation__item">
-            <a href="#" class="navigation__link">Home</a>
+            <a href="#hello" class="navigation__link">Home</a>
           </li>
           <li class="navigation__item">
-            <a href="#" class="navigation__link">About me</a>
+            <a href="#stack" class="navigation__link">technologies stack</a>
           </li>
           <li class="navigation__item">
-            <a href="#" class="navigation__link">Portfolio</a>
+            <a href="#about-me" class="navigation__link">About me</a>
           </li>
           <li class="navigation__item">
-            <a href="#" class="navigation__link">Contact</a>
+            <a href="#portfolio" class="navigation__link">Portfolio</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#contackt" class="navigation__link">Contact</a>
           </li>
         </ul>
       </nav>
     </div>
   </header>
   <main class="main">
-    <section class="hello">
+    <section class="hello" id="hello">
       <div class="hello__wrap container">
         <div class="hello__info">
           <p class="hello__subtitle">Hello</p>
@@ -65,22 +68,17 @@
           <div class="hello__pic-wrap">
             <div class="hello__img-scills hello__img-scills--one">
               <svg  width="40" height="40" xmlns="http://www.w3.org/2000/svg">
-                <use xlink:href="img/sprite.svg#icon"></use>
+                <use xlink:href="img/sprite.svg#icon-tag"></use>
               </svg>
             </div>
             <div class="hello__img-scills hello__img-scills--two">
               <svg  width="40" height="40" xmlns="http://www.w3.org/2000/svg">
-                <use xlink:href="img/sprite.svg#icon-two"></use>
+                <use xlink:href="img/sprite.svg#icon-json"></use>
               </svg>
             </div>
             <div class="hello__img-scills hello__img-scills--thre">
               <svg  width="40" height="40" xmlns="http://www.w3.org/2000/svg">
-                <use xlink:href="img/sprite.svg#icon"></use>
-              </svg>
-            </div>
-            <div class="hello__img-scills hello__img-scills--four">
-              <svg  width="40" height="40" xmlns="http://www.w3.org/2000/svg">
-                <use xlink:href="img/sprite.svg#icon"></use>
+                <use xlink:href="img/sprite.svg#icon-laptop"></use>
               </svg>
             </div>
             <img class="hello__iam-img" src="img/hello/i'm.png" alt="i am photo" width="300" height="600">
@@ -88,7 +86,7 @@
         </div>
       </div>
     </section>
-    <div class="paralax paralax--hello">
+    <div class="paralax paralax--stack" id="stack">
       <div class="paralax__blur"></div>
       <p class="paralax__title" aria-hidden="true">technologies stack</p>
     </div>
@@ -125,7 +123,7 @@
         </li>
       </ul>
     </section>
-    <div class="paralax paralax--stack">
+    <div class="paralax paralax--about-me" id="about-me">
       <div class="paralax__blur"></div>
       <p class="paralax__title" aria-hidden="true">about me</p>
     </div>
@@ -164,7 +162,7 @@
         </div>
       </div>
     </section>
-    <div class="paralax paralax--about-me">
+    <div class="paralax paralax--portfolio" id="portfolio">
       <div class="paralax__blur"></div>
       <p class="paralax__title" aria-hidden="true">Portfolio</p>
     </div>
@@ -215,7 +213,7 @@
         </div>
       </div>
     </section>
-    <div class="paralax paralax--portfolio">
+    <div class="paralax paralax--footer" id="contackt">
       <div class="paralax__blur"></div>
       <p class="paralax__title" aria-hidden="true">Contact Info</p>
     </div>

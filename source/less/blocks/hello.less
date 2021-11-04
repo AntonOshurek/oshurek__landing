@@ -2,9 +2,8 @@
 
 .hello {
   width: 100%;
-  height: calc(100vh - @header-height);
-  margin-top: @header-height;
-  padding: 20px @basic-side-padding 0px @basic-side-padding;
+  height: 100vh;
+  padding: @basic-side-top-padding @basic-side-top-padding 0px @basic-side-top-padding;
   background: @header-bg;
 }
 
@@ -18,7 +17,6 @@
 .hello__info {
   z-index: 2;
   width: 350px;
-  //height: 377px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -120,16 +118,11 @@
   }
 
   &--two {
-    top: 45%;
-    left: -25%;
-  }
-
-  &--thre {
     top: 70%;
     left: -20%;
   }
 
-  &--four {
+  &--thre {
     left: 80%;
     top: 20%;
   }
