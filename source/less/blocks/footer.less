@@ -21,11 +21,27 @@
 
 .footer-navigation__link {
   color: #E4E4E4;
+  opacity: 0.9;
   font-weight: 300;
   font-size: 18px;
   line-height: 21px;
   text-decoration: none;
   font-family: 'Roboto Mono', monospace;
+  padding: 5px;
+
+  &:not(:last-child) {
+    margin-bottom: 5px;
+  }
+
+  &:hover,
+  &:focus {
+    color: @standart-white;
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
 }
 
 .footer-contact {
@@ -41,6 +57,7 @@
   font-size: 18px;
   line-height: 21px;
   font-family: 'Roboto Mono', monospace;
+  margin-bottom: 10px;
 }
 
 .footer-contact__link {
@@ -50,6 +67,21 @@
   line-height: 21px;
   text-decoration: none;
   font-family: 'Roboto Mono', monospace;
+  padding: 5px;
+
+  &:not(:last-child) {
+    margin-bottom: 5px;
+  }
+
+  &:hover,
+  &:focus {
+    color: @standart-white;
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
 }
 
 .footer-copyright {
@@ -57,7 +89,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .footer-copyright__button-top {

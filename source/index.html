@@ -43,7 +43,7 @@
             <a href="#portfolio" class="navigation__link">Portfolio</a>
           </li>
           <li class="navigation__item">
-            <a href="#contackt" class="navigation__link">Contact</a>
+            <a href="#contact" class="navigation__link">Contact</a>
           </li>
         </ul>
       </nav>
@@ -149,15 +149,21 @@
         </article>
         <div class="about-me__pic about-me__pic--double">
           <div class="about-me__img-wrap about-me__img-wrap--double">
-            <img class="about-me__img about-me__img--double" width="200" height="200" src="img/about-me/Logo__main.jpg" alt="">
+            <img class="about-me__img about-me__img--double" width="200" height="200"
+              src="img/about-me/about-me-img-2.jpg"
+              srcset="img/about-me/about-me-img-2.webp" alt="I ride bmx">
           </div>
           <div class="about-me__img-wrap about-me__img-wrap--double">
-            <img class="about-me__img about-me__img--double" width="200" height="200" src="img/about-me/Logo__main.jpg" alt="">
+            <img class="about-me__img about-me__img--double" width="200" height="200"
+              src="img/about-me/about-me-img-1.jpg"
+              srcset="img/about-me/about-me-img-1.webp" alt="I ride bmx">
           </div>
         </div>
         <div class="about-me__pic about-me__pic--solo">
           <div class="about-me__img-wrap about-me__img-wrap--solo">
-            <img class="about-me__img about-me__img--solo" width="210" height="360" src="img/about-me/Logo__main.jpg" alt="">
+            <img class="about-me__img about-me__img--solo" width="210" height="360"
+              src="img/about-me/about-me-img-main.jpg"
+              srcset="img/about-me/about-me-img-main.webp" alt="I am">
           </div>
         </div>
       </div>
@@ -200,20 +206,52 @@
                   <br>
                   <a class="sliderfull-items__project-link" href="#">more...</a>
                 </p>
-                <picture>
-                  <source srcset="img/paralax/paralax--hello-to-stack.webp"
-                          type="image/webp">
-                  <img class="sliderfull-items__img" width="500px" height="300px"
-                    src="img/paralax/paralax--hello-to-stack.jpg"
-                    alt="slide 1">
-                </picture>
+                <img class="sliderfull-items__img" width="500px" height="300px"
+                  src="img/paralax/paralax--hello-to-stack.jpg"
+                  alt="slide 1">
+              </div>
+
+              <div class="sliderfull-items__item">
+                <p class="sliderfull-items__text">
+                  slide 2
+                  <br>
+                  <a class="sliderfull-items__project-link" href="#">more...</a>
+                </p>
+                <img class="sliderfull-items__img" width="500px" height="300px"
+                  src="img/paralax/paralax--hello-to-stack.jpg"
+                  srcset="img/paralax/paralax--hello-to-stack.webp"
+                  alt="slide 1">
+              </div>
+
+              <div class="sliderfull-items__item">
+                <p class="sliderfull-items__text">
+                  slide 3
+                  <br>
+                  <a class="sliderfull-items__project-link" href="#">more...</a>
+                </p>
+                <img class="sliderfull-items__img" width="500px" height="300px"
+                  src="img/paralax/paralax--hello-to-stack.jpg"
+                  srcset="img/paralax/paralax--hello-to-stack.webp"
+                  alt="slide 1">
+              </div>
+
+              <div class="sliderfull-items__item">
+                <p class="sliderfull-items__text">
+                  slide 3
+                  <br>
+                  <a class="sliderfull-items__project-link" href="#">more...</a>
+                </p>
+                <img class="sliderfull-items__img" width="500px" height="300px"
+                  src="img/paralax/paralax--hello-to-stack.jpg"
+                  srcset="img/paralax/paralax--hello-to-stack.webp"
+                  alt="slide 1">
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <div class="paralax paralax--footer" id="contackt">
+    <div class="paralax paralax--footer" id="contact">
       <div class="paralax__blur"></div>
       <p class="paralax__title" aria-hidden="true">Contact Info</p>
     </div>
@@ -221,14 +259,14 @@
   <footer class="footer">
     <div class="footer__wrap container">
       <div class="footer-navigation">
-        <a class="footer-navigation__link" href="#">Home</a>
-        <a class="footer-navigation__link" href="#">About Me</a>
-        <a class="footer-navigation__link" href="#">Portfolio</a>
-        <a class="footer-navigation__link" href="#">Contact</a>
+        <a class="footer-navigation__link" href="#hello">Home</a>
+        <a class="footer-navigation__link" href="#stack">tech stack</a>
+        <a class="footer-navigation__link" href="#about-me">About Me</a>
+        <a class="footer-navigation__link" href="#portfolio">Portfolio</a>
       </div>
       <div class="footer-contact">
         <h2 class="footer-contact__title">Contact:</h2>
-        <a class="footer-contact__link" href="oshurekweb@gmail.com">Email: oshurekweb@gmail.com</a>
+        <a class="footer-contact__link" href="mailto:oshurekweb@gmail.com">Email: oshurekweb@gmail.com</a>
         <a class="footer-contact__link" href="https://www.instagram.com/ooshurek/">instagram ooshurek</a>
         <a class="footer-contact__link" href="tel:+48575999829">Calls: +48 575 - 999 - 829</a>
       </div>
@@ -243,6 +281,13 @@
       </div>
     </div>
   </footer>
+
+  <template id="indicator">
+    <li class="sliderfull-indicators__item">
+      <button class="sliderfull-indicators__button" data-slide-index = "${i + 1}"></button>
+    </li>
+  </template>
+
   <script src="js/bundle.js"></script>
 </body>
 </html>

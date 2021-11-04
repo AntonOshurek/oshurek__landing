@@ -1,6 +1,6 @@
-import saydefault from './block-1';
+import portfolioSlider from './blocks/portfolio-lider';
 
 window.addEventListener('DOMContentLoaded', () => {
-    saydefault();
+  portfolioSlider();
 });
 

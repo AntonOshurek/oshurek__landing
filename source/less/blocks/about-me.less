@@ -1,6 +1,6 @@
 .about-me {
   width: 100%;
-  padding: 100px 20px;
+  padding: 100px @basic-side-top-padding;
   background-color: #414141;
   display: flex;
   justify-content: center;
@@ -45,13 +45,13 @@
 }
 
 .about-me__pic {
+  z-index: 1;
+  position: relative;
+  display: flex;
 
   &--double {
-    z-index: 1;
-    position: relative;
     order: 1;
     height: 100%;
-    display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-end;
@@ -71,10 +71,7 @@
   }
 
   &--solo {
-    z-index: 1;
-    position: relative;
     order: 3;
-    display: flex;
     align-items: center;
 
     &::before {
