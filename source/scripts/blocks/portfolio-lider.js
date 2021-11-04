@@ -11,8 +11,6 @@ export default function portfolioSlider() {
   //all sledes
   const slides = document.querySelectorAll('.sliderfull-items__item');
 
-  sliderCounterTotal.textContent = slides.length;
-
   const getZero = (num) => {
     if (num >= 0 && num < 10) {
       return `0${num}`;
@@ -21,15 +19,18 @@ export default function portfolioSlider() {
     }
   };
 
+  sliderCounterTotal.textContent = getZero(slides.length);
+
   let slideIndex = 1;
   let offset = 0;
+
   const width = window.getComputedStyle(slidesWrapper).width;
+
+  slidesField.style.width = 100 * slides.length + '%';
 
   slides.forEach(slide => {
     slide.style.width = width;
   });
-
-  slidesField.style.width = 100 * slides.length + '%';
 
   const createIndicatorBtn = () => {
     const sliderIndicatorBlock = document.querySelector('.sliderfull-indicators');
@@ -65,7 +66,7 @@ export default function portfolioSlider() {
   function showCurrentNumber() {
     if (slideIndex > slides.length) slideIndex = 1;
     if (slideIndex < 1) slideIndex = slides.length;
-    sliderCounterCurrent.innerHTML = getZero(slideIndex);
+    sliderCounterCurrent.textContent = getZero(slideIndex);
 
     indicatorsBtn.forEach(btn => {
       btn.classList.remove('sliderfull-indicators__button--active');
