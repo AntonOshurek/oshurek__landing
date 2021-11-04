@@ -1,6 +1,6 @@
 .header {
-  position: absolute;
-  z-index: 2;
+  position: fixed;
+  z-index: 3;
   top: 0;
   left: 0;
   width: 100%;
@@ -10,6 +10,8 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 @basic-side-padding;
+  border-bottom: 2px solid @logo-color;
+  opacity: 0.9;
 }
 
 .header__wrap {
