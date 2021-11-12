@@ -1,20 +1,35 @@
 export default function navigation() {
   const body = document.querySelector('.body');
+  const navBtnWrap = document.querySelector('.nav__btn-wrap');
   const navBtn = document.querySelector('.nav__btn');
   const navBtnBurger = document.querySelector('.nav__btn-burger');
   const navList = document.querySelector('.nav__list');
-  const navLink = document.querySelectorAll('.nav__link');
   const noTouchBG = document.querySelector('.nav__background-notouch');
+  const nawListWrap = document.querySelector('.nav__list-wrap');
 
   let navOpen = false;
 
-  navBtn.addEventListener('click', () => {
-    if(!navOpen) {
-      openNavigation();
-    } else {
+  if (window.screen.width <= 900) {
+    navBtn.addEventListener('click', () => {
+      if(!navOpen) {
+        openNavigation();
+      } else {
+        closeNavigation();
+      }
+    });
+  };
+
+  const onLinkCloseNavigation = (evt) => {
+    if(evt.target.closest('.nav__link')) {
       closeNavigation();
     }
-  });
+  };
+
+  const onWindowResizeCloseNavigation = () => {
+    if (window.screen.width > 900) {
+      closeNavigation();
+    };
+  }
 
   function openNavigation() {
     navBtn.classList.add('nav__btn--open');
@@ -23,22 +38,9 @@ export default function navigation() {
     body.classList.add('body--scrolloff');
     noTouchBG.classList.add('nav__background-notouch--on');
 
-    navLink.forEach((link) => {
-      link.addEventListener('click', () => {
-        closeNavigation();
-      });
-    });
-
-    noTouchBG.addEventListener('click', () => {
-      closeNavigation();
-    });
-
-    window.addEventListener('resize', (e) => {
-      console.log(e);
-      if (window.screen.width > 900) {
-        closeNavigation();
-      };
-    });
+    nawListWrap.addEventListener('click', onLinkCloseNavigation);
+    noTouchBG.addEventListener('click', closeNavigation);
+    window.addEventListener('resize', onWindowResizeCloseNavigation);
 
     navOpen = true;
   };
@@ -49,6 +51,10 @@ export default function navigation() {
     navList.classList.remove('nav__list--open');
     body.classList.remove('body--scrolloff');
     noTouchBG.classList.remove('nav__background-notouch--on');
+
+    nawListWrap.removeEventListener('click', onLinkCloseNavigation);
+    noTouchBG.removeEventListener('click', closeNavigation);
+    window.removeEventListener('resize', onWindowResizeCloseNavigation);
 
     navOpen = false;
   };
