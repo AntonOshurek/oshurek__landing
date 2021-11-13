@@ -1,6 +1,5 @@
 export default function navigation() {
   const body = document.querySelector('.body');
-  const navBtnWrap = document.querySelector('.nav__btn-wrap');
   const navBtn = document.querySelector('.nav__btn');
   const navBtnBurger = document.querySelector('.nav__btn-burger');
   const navList = document.querySelector('.nav__list');
@@ -9,15 +8,13 @@ export default function navigation() {
 
   let navOpen = false;
 
-  if (window.screen.width <= 900) {
-    navBtn.addEventListener('click', () => {
-      if(!navOpen) {
-        openNavigation();
-      } else {
-        closeNavigation();
-      }
-    });
-  };
+  navBtn.addEventListener('click', () => {
+    if(!navOpen) {
+      openNavigation();
+    } else {
+      closeNavigation();
+    }
+  });
 
   const onLinkCloseNavigation = (evt) => {
     if(evt.target.closest('.nav__link')) {
@@ -28,8 +25,8 @@ export default function navigation() {
   const onWindowResizeCloseNavigation = () => {
     if (window.screen.width > 900) {
       closeNavigation();
-    };
-  }
+    }
+  };
 
   function openNavigation() {
     navBtn.classList.add('nav__btn--open');
@@ -43,7 +40,7 @@ export default function navigation() {
     window.addEventListener('resize', onWindowResizeCloseNavigation);
 
     navOpen = true;
-  };
+  }
 
   function closeNavigation() {
     navBtn.classList.remove('nav__btn--open');
@@ -57,5 +54,5 @@ export default function navigation() {
     window.removeEventListener('resize', onWindowResizeCloseNavigation);
 
     navOpen = false;
-  };
+  }
 }
