@@ -26,9 +26,9 @@ export default function portfolioSlider() {
 
   const width = window.getComputedStyle(slidesWrapper).width;
 
-  slidesField.style.width = 100 * slides.length + '%';
+  slidesField.style.width = `${100 * slides.length}%`;
 
-  slides.forEach(slide => {
+  slides.forEach((slide) => {
     slide.style.width = width;
   });
 
@@ -47,35 +47,35 @@ export default function portfolioSlider() {
   createIndicatorBtn();
 
   const indicatorsBtn = document.querySelectorAll('.sliderfull-indicators__button');
-  indicatorsBtn.forEach(btn => {
+  indicatorsBtn.forEach((btn) => {
     btn.addEventListener('click', selectbtn);
   });
 
   function selectbtn() {
-    let atribute = this.getAttribute('data-slide-index');
+    const atribute = this.getAttribute('data-slide-index');
     slideIndex = atribute;
 
     offset = +width.slice(0, width.length - 2) * (atribute - 1);
     slidesField.style.transform = `translate(-${offset}px)`;
 
     showCurrentNumber();
-  };
+  }
 
   function showCurrentNumber() {
-    if (slideIndex > slides.length) slideIndex = 1;
-    if (slideIndex < 1) slideIndex = slides.length;
+    if (slideIndex > slides.length) {slideIndex = 1;}
+    if (slideIndex < 1) {slideIndex = slides.length;}
     sliderCounterCurrent.textContent = getZero(slideIndex);
 
-    indicatorsBtn.forEach(btn => {
+    indicatorsBtn.forEach((btn) => {
       btn.classList.remove('sliderfull-indicators__button--active');
     });
     indicatorsBtn[slideIndex - 1].classList.add('sliderfull-indicators__button--active');
-  };
+  }
   showCurrentNumber();
 
   //slider buttons listeners
   sliderBtnNext.addEventListener('click', () => {
-    if (offset == +width.slice(0, width.length - 2) * (slides.length - 1)) {
+    if (offset === +width.slice(0, width.length - 2) * (slides.length - 1)) {
       offset = 0;
     } else {
       offset += +width.slice(0, width.length - 2);
@@ -87,7 +87,7 @@ export default function portfolioSlider() {
   });
 
   sliderBtnPrev.addEventListener('click', () => {
-    if (offset == 0) {
+    if (offset === 0) {
       offset = +width.slice(0, width.length - 2) * (slides.length - 1);
     } else {
       offset -= +width.slice(0, width.length - 2);
@@ -98,4 +98,4 @@ export default function portfolioSlider() {
     showCurrentNumber();
   });
 
-};
+}
