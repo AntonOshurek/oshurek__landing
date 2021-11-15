@@ -3,6 +3,10 @@
   height: 25vh;
   padding: 40px @basic-side-top-padding;
   background: linear-gradient(130.68deg, #414141 0%, #2D2D2D 100.52%);
+
+  @media (max-width: @tablet-width) {
+    height: min-content;
+  }
 }
 
 .footer__wrap {
@@ -10,6 +14,10 @@
   justify-content: space-between;
   align-items: center;
   height: 100%;
+
+  @media (max-width: @tablet-width) {
+    flex-direction: column;
+  }
 }
 
 .footer-navigation {
@@ -17,6 +25,11 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
+
+  @media (max-width: @tablet-width) {
+    align-items: center;
+    margin-bottom: 40px;
+  }
 }
 
 .footer-navigation__link {
@@ -28,6 +41,7 @@
   text-decoration: none;
   font-family: 'Roboto Mono', monospace;
   padding: 5px;
+  border-bottom: 3px solid transparent;
 
   &:not(:last-child) {
     margin-bottom: 5px;
@@ -37,6 +51,7 @@
   &:focus {
     color: @standart-white;
     opacity: 1;
+    border-bottom: 3px solid @logo-color;
   }
 
   &:active {
@@ -49,6 +64,11 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
+
+  @media (max-width: @tablet-width) {
+    align-items: center;
+    margin-bottom: 30px;
+  }
 }
 
 .footer-contact__title {
@@ -68,6 +88,7 @@
   text-decoration: none;
   font-family: 'Roboto Mono', monospace;
   padding: 5px;
+  border-bottom: 3px solid transparent;
 
   &:not(:last-child) {
     margin-bottom: 5px;
@@ -77,6 +98,7 @@
   &:focus {
     color: @standart-white;
     opacity: 1;
+    border-bottom: 3px solid @logo-color;
   }
 
   &:active {

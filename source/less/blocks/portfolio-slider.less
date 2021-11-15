@@ -13,10 +13,6 @@
   background: linear-gradient(130.68deg, #414141 0%, #2D2D2D 100.52%);
   box-shadow: 0px 4px 15px rgba(27, 27, 27, 0.28);
   border-radius: 29px;
-
-  @media (max-width: 600px) {
-    padding: 20px 0;
-  }
 }
 
 //controls buttons
@@ -52,6 +48,17 @@
 
   &--prev {
     left: -80px;
+  }
+
+  @media (max-width: @tablet-width) {
+    top: 100%;
+    &--next {
+      right: 50px;
+    }
+
+    &--prev {
+      left: 50px;
+    }
   }
 }
 

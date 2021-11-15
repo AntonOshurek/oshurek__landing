@@ -9,12 +9,16 @@
 }
 
 .stack__list {
-  max-width: 700px;
+  width: 700px;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: @tablet-width) {
+    width: 100%;
+  }
 }
 
 .stack__item {
