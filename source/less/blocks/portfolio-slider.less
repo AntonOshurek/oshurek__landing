@@ -179,6 +179,10 @@ grid-column-gap: 20px;
   flex-direction: row-reverse;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: @mobile-width) {
+    flex-direction: column;
+  }
 }
 
 .slider-items__title {
