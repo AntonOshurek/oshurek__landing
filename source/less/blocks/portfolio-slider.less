@@ -181,7 +181,16 @@ grid-column-gap: 20px;
   justify-content: space-between;
 }
 
+.slider-items__title {
+  text-align: center;
+  color: @standart-white;
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
 .slider-items__text {
+
   height: 100%;
   flex-grow: 1;
   display: flex;
@@ -189,6 +198,7 @@ grid-column-gap: 20px;
   justify-content: center;
   align-items: flex-start;
   margin-left: 40px;
+  padding-bottom: 40px;
   color: @standart-white;
   font-weight: 300;
   font-size: 18px;
@@ -200,6 +210,10 @@ grid-column-gap: 20px;
   color: #E2A100;
   text-transform: uppercase;
   cursor: pointer;
+
+  &--page {
+    margin: 10px 0;
+  }
 }
 
 .slider-items__img {
