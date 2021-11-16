@@ -90,7 +90,11 @@
                 <use xlink:href="img/sprite.svg#icon-laptop"></use>
               </svg>
             </div>
-            <img class="hello__iam-img" src="img/hello/i'm.png" alt="i am photo" width="300" height="600">
+            <img class="hello__iam-img"
+              src="img/hello/i'm.png"
+              srcset="img/hello/i'm.webp"
+              alt="i am photo" width="300" height="600"
+            >
           </div>
         </div>
       </div>
@@ -159,20 +163,23 @@
         <div class="about-me__pic about-me__pic--double">
           <div class="about-me__img-wrap about-me__img-wrap--double">
             <img class="about-me__img about-me__img--double" width="200" height="200"
+              srcset="img/about-me/about-me-img-2.webp"
               src="img/about-me/about-me-img-2.jpg"
-              srcset="img/about-me/about-me-img-2.webp" alt="I ride bmx">
+              alt="I ride bmx">
           </div>
           <div class="about-me__img-wrap about-me__img-wrap--double">
             <img class="about-me__img about-me__img--double" width="200" height="200"
+              srcset="img/about-me/about-me-img-1.webp"
               src="img/about-me/about-me-img-1.jpg"
-              srcset="img/about-me/about-me-img-1.webp" alt="I ride bmx">
+              alt="I ride bmx">
           </div>
         </div>
         <div class="about-me__pic about-me__pic--solo">
           <div class="about-me__img-wrap about-me__img-wrap--solo">
             <img class="about-me__img about-me__img--solo" width="210" height="360"
+              srcset="img/about-me/about-me-img-main.webp"
               src="img/about-me/about-me-img-main.jpg"
-              srcset="img/about-me/about-me-img-main.webp" alt="I am">
+              alt="I am">
           </div>
         </div>
       </div>
@@ -190,13 +197,13 @@
             <span class="slederfull-controls__total slederfull-controls__total--total" aria-label="total elements">04</span>
           </div>
           <button class="sliderfull__button sliderfull__button--next" type="button"><span class="visually-hidden">right</span>
-            <svg class="sliderfull__button-img" aria-hidden="true" focusable="false" width="22" height="40" viewBox="0 0 22 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M2.07568 39.0585L0.0775051 37.0107L17.0931 19.5639L0.0220261 2.06243L2.02116 0.0146294L21.0894 19.5639L2.07568 39.0585Z" fill="white"/>
+            <svg class="sliderfull__button-img" aria-hidden="true" focusable="false" width="22" height="40">
+              <use xlink:href="img/sprite.svg#button-arrow"></use>
             </svg>
           </button>
           <button class="sliderfull__button sliderfull__button--prev" type="button"><span class="visually-hidden">left</span>
-            <svg class="sliderfull__button-img" aria-hidden="true" focusable="false" width="22" height="40" viewBox="0 0 22 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M19.9244 0.941467L21.9225 2.98927L4.90696 20.4361L21.978 37.9376L19.9789 39.9854L0.910614 20.4361L19.9244 0.941467Z" fill="white"/>
+            <svg class="sliderfull__button-img" aria-hidden="true" focusable="false" width="22" height="40">
+              <use xlink:href="img/sprite.svg#button-arrow"></use>
             </svg>
           </button>
           <ul class="sliderfull-indicators">
@@ -216,6 +223,7 @@
                   <a class="sliderfull-items__project-link" href="#">more...</a>
                 </p>
                 <img class="sliderfull-items__img" width="500px" height="300px"
+                  srcset="img/paralax/paralax--hello-to-stack.webp"
                   src="img/paralax/paralax--hello-to-stack.jpg"
                   alt="slide 1">
               </div>
@@ -227,8 +235,8 @@
                   <a class="sliderfull-items__project-link" href="#">more...</a>
                 </p>
                 <img class="sliderfull-items__img" width="500px" height="300px"
-                  src="img/paralax/paralax--hello-to-stack.jpg"
                   srcset="img/paralax/paralax--hello-to-stack.webp"
+                  src="img/paralax/paralax--hello-to-stack.jpg"
                   alt="slide 1">
               </div>
 
@@ -239,8 +247,8 @@
                   <a class="sliderfull-items__project-link" href="#">more...</a>
                 </p>
                 <img class="sliderfull-items__img" width="500px" height="300px"
-                  src="img/paralax/paralax--hello-to-stack.jpg"
                   srcset="img/paralax/paralax--hello-to-stack.webp"
+                  src="img/paralax/paralax--hello-to-stack.jpg"
                   alt="slide 1">
               </div>
 
@@ -251,8 +259,8 @@
                   <a class="sliderfull-items__project-link" href="#">more...</a>
                 </p>
                 <img class="sliderfull-items__img" width="500px" height="300px"
-                  src="img/paralax/paralax--hello-to-stack.jpg"
                   srcset="img/paralax/paralax--hello-to-stack.webp"
+                  src="img/paralax/paralax--hello-to-stack.jpg"
                   alt="slide 1">
               </div>
             </div>
@@ -282,8 +290,8 @@
       <div class="footer-copyright">
         <button class="footer-copyright__button-top" type="button">
           <span class="visually-hidden">to top</span>
-          <svg class="footer-copyright__button-icon" aria-hidden="true" focusable="false" width="22" height="40" viewBox="0 0 22 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M2.07568 39.0585L0.0775051 37.0107L17.0931 19.5639L0.0220261 2.06243L2.02116 0.0146294L21.0894 19.5639L2.07568 39.0585Z" fill="white"/>
+          <svg class="footer-copyright__button-icon" aria-hidden="true" focusable="false" width="22" height="40">
+            <use xlink:href="img/sprite.svg#button-arrow"></use>
           </svg>
         </button>
         <p class="footer-copyright__text">Copyright © 2021, Anton Oshurek</p>
