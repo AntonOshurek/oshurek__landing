@@ -1,15 +1,15 @@
 export default function portfolioSlider() {
   //btn
-  const sliderBtnPrev = document.querySelector('.sliderfull__button--prev');
-  const sliderBtnNext = document.querySelector('.sliderfull__button--next');
+  const sliderBtnPrev = document.querySelector('.slider__button--prev');
+  const sliderBtnNext = document.querySelector('.slider__button--next');
   //slides counter
-  const sliderCounterCurrent = document.querySelector('.slederfull-controls__total--current');
-  const sliderCounterTotal = document.querySelector('.slederfull-controls__total--total');
+  const sliderCounterCurrent = document.querySelector('.slider-controls__total--current');
+  const sliderCounterTotal = document.querySelector('.slider-controls__total--total');
   //slides wrpper
-  const slidesWrapper = document.querySelector('.sliderfull-items');
-  const slidesField = document.querySelector('.sliderfull-items__inner');
+  const slidesWrapper = document.querySelector('.slider-items');
+  const slidesField = document.querySelector('.slider-items__inner');
   //all sledes
-  const slides = document.querySelectorAll('.sliderfull-items__item');
+  const slides = document.querySelectorAll('.slider-items__item');
 
   const getZero = (num) => {
     if (num >= 0 && num < 10) {
@@ -33,20 +33,20 @@ export default function portfolioSlider() {
   });
 
   const createIndicatorBtn = () => {
-    const sliderIndicatorBlock = document.querySelector('.sliderfull-indicators');
+    const sliderIndicatorBlock = document.querySelector('.slider-indicators');
     const indicators = document.querySelector('#indicator');
     const fragment = new DocumentFragment();
 
     for(let i = 0; i < slides.length; i++) {
       const templateItem = indicators.content.cloneNode(true);
-      templateItem.querySelector('.sliderfull-indicators__button').setAttribute('data-slide-index', i + 1);
+      templateItem.querySelector('.slider-indicators__button').setAttribute('data-slide-index', i + 1);
       fragment.append(templateItem);
     }
     sliderIndicatorBlock.append(fragment);
   };
   createIndicatorBtn();
 
-  const indicatorsBtn = document.querySelectorAll('.sliderfull-indicators__button');
+  const indicatorsBtn = document.querySelectorAll('.slider-indicators__button');
   indicatorsBtn.forEach((btn) => {
     btn.addEventListener('click', selectbtn);
   });
@@ -67,9 +67,9 @@ export default function portfolioSlider() {
     sliderCounterCurrent.textContent = getZero(slideIndex);
 
     indicatorsBtn.forEach((btn) => {
-      btn.classList.remove('sliderfull-indicators__button--active');
+      btn.classList.remove('slider-indicators__button--active');
     });
-    indicatorsBtn[slideIndex - 1].classList.add('sliderfull-indicators__button--active');
+    indicatorsBtn[slideIndex - 1].classList.add('slider-indicators__button--active');
   }
   showCurrentNumber();
 
