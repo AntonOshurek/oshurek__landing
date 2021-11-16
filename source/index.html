@@ -194,28 +194,28 @@
     <section class="portfolio">
       <div class="portfolio__wrap container">
         <h2 class="visually-hidden">Portfolio</h2>
-        <div class="sliderfull__wrap">
-          <div class="slederfull-controls">
-            <span class="slederfull-controls__total slederfull-controls__total--current" aria-label="current element">01</span>
-            <span class="slederfull-controls__total slederfull-controls__total--total" aria-label="total elements">04</span>
+        <div class="slider">
+          <div class="slider-controls">
+            <span class="slider-controls__total slider-controls__total--current" aria-label="current element">01</span>
+            <span class="slider-controls__total slider-controls__total--total" aria-label="total elements">04</span>
           </div>
-          <button class="sliderfull__button sliderfull__button--next" type="button"><span class="visually-hidden">right</span>
-            <svg class="sliderfull__button-img sliderfull__button-img--next" aria-hidden="true" focusable="false" width="22" height="40">
+          <button class="slider__button slider__button--next" type="button"><span class="visually-hidden">right</span>
+            <svg class="slider__button-img slider__button-img--next" aria-hidden="true" focusable="false" width="22" height="40">
               <use xlink:href="img/sprite.svg#button-arrow"></use>
             </svg>
           </button>
-          <button class="sliderfull__button sliderfull__button--prev" type="button"><span class="visually-hidden">left</span>
-            <svg class="sliderfull__button-img sliderfull__button-img--prev" aria-hidden="true" focusable="false" width="22" height="40">
+          <button class="slider__button slider__button--prev" type="button"><span class="visually-hidden">left</span>
+            <svg class="slider__button-img slider__button-img--prev" aria-hidden="true" focusable="false" width="22" height="40">
               <use xlink:href="img/sprite.svg#button-arrow"></use>
             </svg>
           </button>
-          <ul class="sliderfull-indicators">
+          <ul class="slider-indicators">
             <!--elements added dynamically from javascript-->
           </ul>
-          <div class="sliderfull-items">
-            <div class="sliderfull-items__inner">
-              <div class="sliderfull-items__item">
-                <p class="sliderfull-items__text">
+          <div class="slider-items">
+            <div class="slider-items__inner">
+              <div class="slider-items__item">
+                <p class="slider-items__text">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Donec ut orci eu elit consequat posuere ut sed elit.
                   Nulla et tristique felis. Morbi quis orci non purus blandit fringilla.
@@ -223,45 +223,45 @@
                   Nam nec magna lacus. Etiam euismod egestas mauris nec mollis.
                   Phasellus efficitur et ex vel condimentum. Cras enim purus, tempor sed massa
                   <br>
-                  <a class="sliderfull-items__project-link" href="#">more...</a>
+                  <a class="slider-items__project-link" href="#">more...</a>
                 </p>
-                <img class="sliderfull-items__img" width="500px" height="300px"
+                <img class="slider-items__img" width="500px" height="300px"
                   srcset="img/paralax/paralax--hello-to-stack.webp"
                   src="img/paralax/paralax--hello-to-stack.jpg"
                   alt="slide 1">
               </div>
 
-              <div class="sliderfull-items__item">
-                <p class="sliderfull-items__text">
+              <div class="slider-items__item">
+                <p class="slider-items__text">
                   slide 2
                   <br>
-                  <a class="sliderfull-items__project-link" href="#">more...</a>
+                  <a class="slider-items__project-link" href="#">more...</a>
                 </p>
-                <img class="sliderfull-items__img" width="500px" height="300px"
+                <img class="slider-items__img" width="500px" height="300px"
                   srcset="img/paralax/paralax--hello-to-stack.webp"
                   src="img/paralax/paralax--hello-to-stack.jpg"
                   alt="slide 1">
               </div>
 
-              <div class="sliderfull-items__item">
-                <p class="sliderfull-items__text">
+              <div class="slider-items__item">
+                <p class="slider-items__text">
                   slide 3
                   <br>
-                  <a class="sliderfull-items__project-link" href="#">more...</a>
+                  <a class="slider-items__project-link" href="#">more...</a>
                 </p>
-                <img class="sliderfull-items__img" width="500px" height="300px"
+                <img class="slider-items__img" width="500px" height="300px"
                   srcset="img/paralax/paralax--hello-to-stack.webp"
                   src="img/paralax/paralax--hello-to-stack.jpg"
                   alt="slide 1">
               </div>
 
-              <div class="sliderfull-items__item">
+              <div class="slider-items__item">
                 <p class="sliderfull-items__text">
                   slide 3
                   <br>
-                  <a class="sliderfull-items__project-link" href="#">more...</a>
+                  <a class="slider-items__project-link" href="#">more...</a>
                 </p>
-                <img class="sliderfull-items__img" width="500px" height="300px"
+                <img class="slider-items__img" width="500px" height="300px"
                   srcset="img/paralax/paralax--hello-to-stack.webp"
                   src="img/paralax/paralax--hello-to-stack.jpg"
                   alt="slide 1">
@@ -303,8 +303,8 @@
   </footer>
 
   <template id="indicator">
-    <li class="sliderfull-indicators__item">
-      <button class="sliderfull-indicators__button" data-slide-index = "${i + 1}"></button>
+    <li class="slider-indicators__item">
+      <button class="slider-indicators__button" data-slide-index = "${i + 1}"></button>
     </li>
   </template>
 
