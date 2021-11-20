@@ -2,6 +2,56 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./source/scripts/blocks/contact-me-modal.js":
+/*!***************************************************!*\
+  !*** ./source/scripts/blocks/contact-me-modal.js ***!
+  \***************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": function() { return /* binding */ contactMeModal; }
+/* harmony export */ });
+function contactMeModal() {
+  const body = document.querySelector('.body');
+  const modalTrigerBtn = document.querySelector('.hello__button');
+  const modal = document.querySelector('.contact-modal');
+  const modalCloseButton = document.querySelector('.contact-modal__close-button');
+
+  const onModalBgClose = evt => {
+    if (evt.key === 'Escape') {
+      evt.preventDefault();
+      closeModal();
+    }
+
+    if (!evt.target.closest('.contact-modal__content')) {
+      closeModal();
+    }
+
+    modal.removeEventListener('click', onModalBgClose);
+    document.removeEventListener('keydown', onModalBgClose);
+  };
+
+  modalTrigerBtn.addEventListener('click', () => {
+    openModal();
+  });
+
+  function openModal() {
+    modal.classList.add('contact-modal--open');
+    body.classList.add('body--scrolloff');
+    modal.addEventListener('click', onModalBgClose);
+    modalCloseButton.addEventListener('click', closeModal);
+    document.addEventListener('keydown', onModalBgClose);
+  }
+
+  function closeModal() {
+    modal.classList.remove('contact-modal--open');
+    body.classList.remove('body--scrolloff');
+  }
+}
+
+/***/ }),
+
 /***/ "./source/scripts/blocks/navigation.js":
 /*!*********************************************!*\
   !*** ./source/scripts/blocks/navigation.js ***!
@@ -177,6 +227,25 @@ function portfolioSlider() {
   });
 }
 
+/***/ }),
+
+/***/ "./source/scripts/blocks/scrollTopButton.js":
+/*!**************************************************!*\
+  !*** ./source/scripts/blocks/scrollTopButton.js ***!
+  \**************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": function() { return /* binding */ scrollTopButton; }
+/* harmony export */ });
+function scrollTopButton() {
+  const topButton = document.querySelector('.footer-copyright__button-top');
+  topButton.addEventListener('click', () => {
+    window.scrollTo(0, 0);
+  });
+}
+
 /***/ })
 
 /******/ 	});
@@ -244,11 +313,17 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _blocks_portfolio_lider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./blocks/portfolio-lider */ "./source/scripts/blocks/portfolio-lider.js");
 /* harmony import */ var _blocks_navigation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./blocks/navigation */ "./source/scripts/blocks/navigation.js");
+/* harmony import */ var _blocks_scrollTopButton__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./blocks/scrollTopButton */ "./source/scripts/blocks/scrollTopButton.js");
+/* harmony import */ var _blocks_contact_me_modal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./blocks/contact-me-modal */ "./source/scripts/blocks/contact-me-modal.js");
+
+
 
 
 window.addEventListener('DOMContentLoaded', () => {
   (0,_blocks_portfolio_lider__WEBPACK_IMPORTED_MODULE_0__["default"])();
   (0,_blocks_navigation__WEBPACK_IMPORTED_MODULE_1__["default"])();
+  (0,_blocks_scrollTopButton__WEBPACK_IMPORTED_MODULE_2__["default"])();
+  (0,_blocks_contact_me_modal__WEBPACK_IMPORTED_MODULE_3__["default"])();
 });
 }();
 /******/ })()
