@@ -1,5 +1,5 @@
 .paralax {
-  height: 30vh;
+  height: @standart-paralax-height;
   position: relative;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -10,7 +10,7 @@
   justify-content: center;
   align-items: center;
 
-  background-image: url('../img/paralax/paralax--hello-to-stack.jpg');
+  background-image: url('../img/paralax/paralax_4.jpg');
 
   &::after {
     content: '';
@@ -47,12 +47,12 @@
 
   &--about-me {
     height: @about-me-paralax-height;
-    background-image: url('../img/paralax/paralax-1.jpg');
+    background-image: url('../img/paralax/paralax_1.jpg');
   }
 
   &--portfolio {
     height: @portfolio-paralax-height;
-    background-image: url('../img/paralax/paralax-2.jpg');
+    background-image: url('../img/paralax/paralax_2.jpg');
 
 
     &::after {
@@ -66,7 +66,7 @@
 
   &--footer {
     height: @footer-paralax-height;
-    background-image: url('../img/paralax/paralax-3.jpg');
+    background-image: url('../img/paralax/paralax_3.jpg');
 
     &::after {
       height: 40px;
@@ -93,6 +93,7 @@
   font-size: 34px;
   color: @hello-text-color;
   text-transform: uppercase;
+  text-align: center;
   font-family: 'Roboto Mono', "Arial", monospace;
-  line-height: 21px;
+  line-height: 30px;
 }
