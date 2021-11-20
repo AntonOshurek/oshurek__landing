@@ -21,6 +21,10 @@
     justify-content: center;
     position: relative;
   }
+
+  @media (max-width: @mobile-width) {
+    align-items: flex-end;
+  }
 }
 
 //info block
@@ -40,8 +44,10 @@
   }
 
   @media (max-width: @mobile-width) {
-    width: auto;
-    padding: 0 50px;
+    width: 80%;
+    padding: 0 10px;
+    align-items: flex-end;
+    justify-content: center;
   }
 }
 
@@ -162,8 +168,8 @@
     }
 
     @media (max-width: @mobile-width) {
-      height: 100%;
-      border: 28px solid #00C4F0;
+      //border: 28px solid #00C4F0;
+      left: -30%;
     }
   }
 }
@@ -190,12 +196,26 @@
   z-index: 1;
   position: absolute;
 
+  @media (max-width: @mobile-width) {
+    width: 60px;
+    height: 60px;
+
+    & > svg {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
   &--one {
     bottom: 80%;
     left: -15%;
 
     @media (max-width: @tablet-width) {
       left: 5%;
+    }
+
+    @media (max-width: @mobile-width) {
+      left: 0;
     }
   }
 
@@ -205,6 +225,12 @@
 
     @media (max-width: @tablet-width) {
       left: 0;
+      bottom: 20%;
+    }
+
+    @media (max-width: @mobile-width) {
+      bottom: 15%;
+      left: 2%;
     }
   }
 
@@ -217,8 +243,8 @@
     }
 
     @media (max-width: @mobile-width) {
-      left: auto;
-      right: 5%;
+      left: 10%;
+      bottom: 50%;
     }
   }
 }
