@@ -25,7 +25,7 @@ const styles = () => gulp.src('source/less/style.less')
   .pipe(rename('style.min.css'))
   .pipe(sourcemap.write('.'))
   .pipe(gulp.dest('build/css'))
-  .pipe(sync.stream()),
+  .pipe(sync.stream());
 exports.styles = styles;
 
 //HTML
