@@ -117,10 +117,10 @@ function navigation() {
 
 /***/ }),
 
-/***/ "./source/scripts/blocks/portfolio-lider.js":
-/*!**************************************************!*\
-  !*** ./source/scripts/blocks/portfolio-lider.js ***!
-  \**************************************************/
+/***/ "./source/scripts/blocks/portfolio-slider.js":
+/*!***************************************************!*\
+  !*** ./source/scripts/blocks/portfolio-slider.js ***!
+  \***************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
@@ -311,7 +311,7 @@ var __webpack_exports__ = {};
   !*** ./source/scripts/index.js ***!
   \*********************************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _blocks_portfolio_lider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./blocks/portfolio-lider */ "./source/scripts/blocks/portfolio-lider.js");
+/* harmony import */ var _blocks_portfolio_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./blocks/portfolio-slider */ "./source/scripts/blocks/portfolio-slider.js");
 /* harmony import */ var _blocks_navigation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./blocks/navigation */ "./source/scripts/blocks/navigation.js");
 /* harmony import */ var _blocks_scrollTopButton__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./blocks/scrollTopButton */ "./source/scripts/blocks/scrollTopButton.js");
 /* harmony import */ var _blocks_contact_me_modal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./blocks/contact-me-modal */ "./source/scripts/blocks/contact-me-modal.js");
@@ -320,10 +320,21 @@ __webpack_require__.r(__webpack_exports__);
 
 
 window.addEventListener('DOMContentLoaded', () => {
-  (0,_blocks_portfolio_lider__WEBPACK_IMPORTED_MODULE_0__["default"])();
-  (0,_blocks_navigation__WEBPACK_IMPORTED_MODULE_1__["default"])();
-  (0,_blocks_scrollTopButton__WEBPACK_IMPORTED_MODULE_2__["default"])();
-  (0,_blocks_contact_me_modal__WEBPACK_IMPORTED_MODULE_3__["default"])();
+  if (document.querySelector('.slider')) {
+    (0,_blocks_portfolio_slider__WEBPACK_IMPORTED_MODULE_0__["default"])();
+  }
+
+  if (document.querySelector('.nav')) {
+    (0,_blocks_navigation__WEBPACK_IMPORTED_MODULE_1__["default"])();
+  }
+
+  if (document.querySelector('.contact-modal')) {
+    (0,_blocks_contact_me_modal__WEBPACK_IMPORTED_MODULE_3__["default"])();
+  }
+
+  if (document.querySelector('.footer-copyright__button-top')) {
+    (0,_blocks_scrollTopButton__WEBPACK_IMPORTED_MODULE_2__["default"])();
+  }
 });
 }();
 /******/ })()
