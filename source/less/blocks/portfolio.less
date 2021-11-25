@@ -8,9 +8,28 @@
 .portfolio__wrap {
   width: 700px;
   padding: 50px 20px 100px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 
   @media (max-width: @tablet-width) {
     width: 100%;
     padding: 50px 0 100px 0;
+  }
+}
+
+.portfolio__all-projects-link {
+  margin-top: 50px;
+  color: @standart-white;
+  font-size: 22px;
+  text-transform: capitalize;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: tomato;
+    opacity: 0.8;
   }
 }
