@@ -2,8 +2,11 @@ import portfolioSlider from './blocks/portfolio-slider';
 import navigation from './blocks/navigation';
 import scrollTopButton from './blocks/scrollTopButton';
 import contactMeModal from './blocks/contact-me-modal';
+import scrollAnimateParalaxTitle from './blocks/scroll-animate-paralax-title';
 
 window.addEventListener('DOMContentLoaded', () => {
+  scrollAnimateParalaxTitle();
+
   if(document.querySelector('.slider')) {
     portfolioSlider();
   }
