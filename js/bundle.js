@@ -229,6 +229,39 @@ function portfolioSlider() {
 
 /***/ }),
 
+/***/ "./source/scripts/blocks/scroll-animate-paralax-title.js":
+/*!***************************************************************!*\
+  !*** ./source/scripts/blocks/scroll-animate-paralax-title.js ***!
+  \***************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": function() { return /* binding */ scrollAnimateParalaxTitle; }
+/* harmony export */ });
+function scrollAnimateParalaxTitle() {
+  const paralaxTitles = document.querySelectorAll('.paralax__title');
+  const options = {
+    rootMargin: '0px',
+    threshold: .2
+  };
+
+  const setItemActive = entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('paralax__title--show');
+      }
+    });
+  };
+
+  const observer = new IntersectionObserver(setItemActive, options);
+  paralaxTitles.forEach(item => {
+    observer.observe(item);
+  });
+}
+
+/***/ }),
+
 /***/ "./source/scripts/blocks/scrollTopButton.js":
 /*!**************************************************!*\
   !*** ./source/scripts/blocks/scrollTopButton.js ***!
@@ -315,11 +348,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _blocks_navigation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./blocks/navigation */ "./source/scripts/blocks/navigation.js");
 /* harmony import */ var _blocks_scrollTopButton__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./blocks/scrollTopButton */ "./source/scripts/blocks/scrollTopButton.js");
 /* harmony import */ var _blocks_contact_me_modal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./blocks/contact-me-modal */ "./source/scripts/blocks/contact-me-modal.js");
+/* harmony import */ var _blocks_scroll_animate_paralax_title__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./blocks/scroll-animate-paralax-title */ "./source/scripts/blocks/scroll-animate-paralax-title.js");
+
 
 
 
 
 window.addEventListener('DOMContentLoaded', () => {
+  (0,_blocks_scroll_animate_paralax_title__WEBPACK_IMPORTED_MODULE_4__["default"])();
+
   if (document.querySelector('.slider')) {
     (0,_blocks_portfolio_slider__WEBPACK_IMPORTED_MODULE_0__["default"])();
   }
