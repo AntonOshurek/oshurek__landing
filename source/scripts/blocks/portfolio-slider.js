@@ -40,6 +40,7 @@ export default function portfolioSlider() {
     for(let i = 0; i < slides.length; i++) {
       const templateItem = indicators.content.cloneNode(true);
       templateItem.querySelector('.slider-indicators__button').setAttribute('data-slide-index', i + 1);
+      templateItem.querySelector('.slider-indicators__title').textContent = `slide ${i + 1}`;
       fragment.append(templateItem);
     }
     sliderIndicatorBlock.append(fragment);
