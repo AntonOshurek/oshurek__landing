@@ -3,6 +3,7 @@ import navigation from './blocks/navigation';
 import scrollTopButton from './blocks/scrollTopButton';
 import contactMeModal from './blocks/contact-me-modal';
 import scrollAnimateParalaxTitle from './blocks/scroll-animate-paralax-title';
+import setCurrentMenuItem from './blocks/set-current-menu-item';
 
 window.addEventListener('DOMContentLoaded', () => {
   scrollAnimateParalaxTitle();
@@ -13,6 +14,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   if(document.querySelector('.nav')) {
     navigation();
+    setCurrentMenuItem();
   }
 
   if(document.querySelector('.contact-modal')) {
