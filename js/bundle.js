@@ -280,6 +280,53 @@ function scrollTopButton() {
   });
 }
 
+/***/ }),
+
+/***/ "./source/scripts/blocks/set-current-menu-item.js":
+/*!********************************************************!*\
+  !*** ./source/scripts/blocks/set-current-menu-item.js ***!
+  \********************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": function() { return /* binding */ setCurrentMenuItem; }
+/* harmony export */ });
+function setCurrentMenuItem() {
+  const isScrolledIntoView = elem => {
+    const rect = elem.getBoundingClientRect();
+    const elemTop = rect.top;
+    const elemBottom = rect.bottom;
+    const isVisible = elemTop < window.innerHeight / 2 && Math.sign(elemTop) != -1 || elemBottom > window.innerHeight / 2 && elemBottom < window.innerHeight;
+    return isVisible;
+  };
+
+  const allSections = document.querySelectorAll('section');
+  const allNavLinks = document.querySelectorAll('.nav__link');
+  const footerBlock = document.querySelector('.footer');
+  const secArr = [...allSections, footerBlock];
+
+  const markCurrentMenuItem = () => {
+    secArr.forEach(section => {
+      let sectionName;
+
+      if (isScrolledIntoView(section)) {
+        sectionName = section.getAttribute('data-section-name');
+        allNavLinks.forEach(link => {
+          link.classList.remove('nav__link--current');
+
+          if (link.getAttribute('data-link-name') === sectionName) {
+            link.classList.add('nav__link--current');
+          }
+        });
+      }
+    });
+  };
+
+  markCurrentMenuItem();
+  window.addEventListener('scroll', markCurrentMenuItem);
+}
+
 /***/ })
 
 /******/ 	});
@@ -350,6 +397,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _blocks_scrollTopButton__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./blocks/scrollTopButton */ "./source/scripts/blocks/scrollTopButton.js");
 /* harmony import */ var _blocks_contact_me_modal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./blocks/contact-me-modal */ "./source/scripts/blocks/contact-me-modal.js");
 /* harmony import */ var _blocks_scroll_animate_paralax_title__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./blocks/scroll-animate-paralax-title */ "./source/scripts/blocks/scroll-animate-paralax-title.js");
+/* harmony import */ var _blocks_set_current_menu_item__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./blocks/set-current-menu-item */ "./source/scripts/blocks/set-current-menu-item.js");
+
 
 
 
@@ -364,6 +413,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   if (document.querySelector('.nav')) {
     (0,_blocks_navigation__WEBPACK_IMPORTED_MODULE_1__["default"])();
+    (0,_blocks_set_current_menu_item__WEBPACK_IMPORTED_MODULE_5__["default"])();
   }
 
   if (document.querySelector('.contact-modal')) {
