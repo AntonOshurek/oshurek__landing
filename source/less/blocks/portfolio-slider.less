@@ -133,7 +133,7 @@ grid-column-gap: 20px;
   height: 10px;
   border: none;
   border-radius: 8px;
-  background-color: #fff;
+  background-color: @standart-white;
   opacity: 0.5;
   transition: 0.4s ease;
   cursor: pointer;
@@ -144,7 +144,7 @@ grid-column-gap: 20px;
   }
 
   &--active {
-    background-color: tomato;
+    background-color: @project-current-link;
     opacity: 1;
   }
 
@@ -164,6 +164,7 @@ grid-column-gap: 20px;
   height: 100%;
   display: flex;
   transition: 0.6s all;
+  list-style: none;
 }
 
 .slider-items__item {
@@ -204,9 +205,14 @@ grid-column-gap: 20px;
 
 .slider-items__project-link {
   font-size: 22px;
-  color: #E2A100;
+  color: @current-link-color;
   text-transform: uppercase;
   cursor: pointer;
+
+  &:hover,
+  &:active {
+    color: @project-current-link;
+  }
 
   &--page {
     margin: 10px 0;

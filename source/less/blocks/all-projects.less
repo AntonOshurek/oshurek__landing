@@ -4,8 +4,8 @@
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
   justify-items: center;
 
   @media (max-width: @tablet-width) {
@@ -54,7 +54,7 @@
 .projects__link {
   display: block;
   font-size: 22px;
-  color: #E2A100;
+  color: @current-link-color;
   text-transform: uppercase;
   cursor: pointer;
   margin-bottom: 10px;
@@ -62,7 +62,7 @@
   &:hover,
   &:focus {
     text-decoration: none;
-    color: tomato;
+    color: @project-current-link;
     opacity: 0.8;
   }
 }

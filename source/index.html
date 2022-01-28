@@ -22,7 +22,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap" rel="stylesheet">
   <!--font-family: 'Roboto Mono', monospace;-->
 
-  <title>OshurekWeb</title>
+  <title>Oshurek Anton</title>
 
   <link rel="stylesheet" href="css/style.min.css">
 
@@ -32,6 +32,7 @@
     <div class="header__wrap container">
       <h1 class="header__title">Oshurek Anton</h1>
       <nav class="nav">
+        <h2 class="visually-hidden">Page navigation</h2>
         <div class="nav__btn-wrap">
           <button class="nav__btn" type="button">
             <span class="visually-hidden">menu button</span>
@@ -42,19 +43,19 @@
         <div class="nav__list">
           <ul class="nav__list-wrap">
             <li class="nav__elem">
-              <a class="nav__link" href="#hello">Home</a>
+              <a class="nav__link" href="#hello" data-link-name="hello">Home</a>
             </li>
             <li class="nav__elem">
-              <a class="nav__link" href="#stack"><nobr>Technologies stack</nobr></a>
+              <a class="nav__link" href="#stack" data-link-name="stack">Technologies stack</a>
             </li>
             <li class="nav__elem">
-              <a class="nav__link" href="#about-me"><nobr>About me</nobr></a>
+              <a class="nav__link" href="#about-me" data-link-name="about-me">About me</a>
             </li>
             <li class="nav__elem">
-              <a class="nav__link" href="#portfolio">Portfolio</a>
+              <a class="nav__link" href="#portfolio" data-link-name="portfolio">Portfolio</a>
             </li>
             <li class="nav__elem">
-              <a class="nav__link" href="#contact"><nobr>Contact</nobr></a>
+              <a class="nav__link" href="#contact" data-link-name="contact">Contact</a>
             </li>
           </ul>
         </div>
@@ -62,11 +63,11 @@
     </div>
   </header>
   <main class="main">
-    <section class="hello" id="hello">
+    <section class="hello" id="hello" data-section-name="hello">
       <div class="hello__wrap container">
         <div class="hello__info">
           <p class="hello__subtitle">Hello</p>
-          <h2 class="hello__title">I’m Anton</br>Oshurek</h2>
+          <h2 class="hello__title">I’m Anton<br>Oshurek</h2>
           <p class="hello__text">
             I've been doing
             front-end and back-end development for
@@ -104,9 +105,9 @@
     </section>
     <div class="paralax paralax--stack" id="stack">
       <div class="paralax__blur"></div>
-      <p class="paralax__title" aria-hidden="true"><nobr>technologies stack</nobr></p>
+      <p class="paralax__title" aria-hidden="true">technologies stack</p>
     </div>
-    <section class="stack">
+    <section class="stack" data-section-name="stack">
       <h2 class="visually-hidden">technologies stack</h2>
       <ul class="stack__list container">
         <li class="stack__item" tabindex="0">
@@ -162,28 +163,26 @@
     </section>
     <div class="paralax paralax--about-me" id="about-me">
       <div class="paralax__blur"></div>
-      <p class="paralax__title" aria-hidden="true"><nobr>about me</nobr></p>
+      <p class="paralax__title" aria-hidden="true">about me</p>
     </div>
-    <section class="about-me">
+    <section class="about-me" data-section-name="about-me">
+      <h2 class="visually-hidden">about me</h2>
       <div class="about-me__wrap container">
-        <article class="about-me__article">
-          <h2 class="visually-hidden">about me</h2>
-          <p class="about-me__text">
-            Hello again everyone! So, you already know that my name is Anton.
-            A little about myself: student, 27 y.o., athlete-bmx,
-            I love creativity since childhood, I live in Poznań, Poland. Why programming?
-            Everything is elementary - I like it, the profession of the future, thanks to which
-            I can provide myself and fulfill my dream - travel, at the moment I specialize in
-            front-end and back-end development, turnkey websites. Why should you
-            choose me? I approach each order with great responsibility and love, as I want to
-            make a name for myself, exclude plagiarism and negligence, fully study the project,
-            the client and its target audience, work for quality, trying to make an order as
-            quickly and uniquely as possible, taking into account all the edits and wishes.
-            By trusting me, you will get the maximum return for your project, save your nerves and time.
-            If you are interested in me , you want to know something more or use my services,
-            then I will provide all my contacts below.
-          </p>
-        </article>
+        <p class="about-me__article">
+          Hello again everyone! So, you already know that my name is Anton.
+          A little about myself: student, 27 y.o., athlete-bmx,
+          I love creativity since childhood, I live in Poznań, Poland. Why programming?
+          Everything is elementary - I like it, the profession of the future, thanks to which
+          I can provide myself and fulfill my dream - travel, at the moment I specialize in
+          front-end and back-end development, turnkey websites. Why should you
+          choose me? I approach each order with great responsibility and love, as I want to
+          make a name for myself, exclude plagiarism and negligence, fully study the project,
+          the client and its target audience, work for quality, trying to make an order as
+          quickly and uniquely as possible, taking into account all the edits and wishes.
+          By trusting me, you will get the maximum return for your project, save your nerves and time.
+          If you are interested in me , you want to know something more or use my services,
+          then I will provide all my contacts below.
+        </p>
         <div class="about-me__pic about-me__pic--double">
           <div class="about-me__img-wrap about-me__img-wrap--double">
             <img class="about-me__img about-me__img--double" width="200" height="200"
@@ -210,15 +209,15 @@
     </section>
     <div class="paralax paralax--portfolio" id="portfolio">
       <div class="paralax__blur"></div>
-      <p class="paralax__title" aria-hidden="true"><nobr>Portfolio</nobr></p>
+      <p class="paralax__title" aria-hidden="true">Portfolio</p>
     </div>
-    <section class="portfolio">
+    <section class="portfolio" data-section-name="portfolio">
       <div class="portfolio__wrap container">
         <h2 class="visually-hidden">Portfolio</h2>
         <div class="slider">
           <div class="slider-controls">
-            <span class="slider-controls__total slider-controls__total--current" aria-label="current element">01</span>
-            <span class="slider-controls__total slider-controls__total--total" aria-label="total elements">04</span>
+            <p class="slider-controls__total slider-controls__total--current"><span class="visually-hidden">slide </span>01</p>
+            <p class="slider-controls__total slider-controls__total--total"><span class="visually-hidden">of </span>04</p>
           </div>
           <button class="standart-arrow-buton slider__button slider__button--next" type="button"><span class="visually-hidden">right</span>
             <svg class="slider__button-img slider__button-img--next" aria-hidden="true" focusable="false" width="22" height="40">
@@ -234,9 +233,9 @@
             <!--elements added dynamically from javascript-->
           </ul>
           <div class="slider-items">
-            <div class="slider-items__inner">
-              <div class="slider-items__item">
-                <div>
+            <ul class="slider-items__inner">
+              <li class="slider-items__item">
+                <article>
                   <h3 class="slider-items__title">Kekstagram</h3>
                   <p class="slider-items__text">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -249,15 +248,15 @@
                     <a class="slider-items__project-link slider-items__project-link--page" target="_blank" href="https://antonoshurek.github.io/1810375-kekstagram-24/">view it...</a>
                     <a class="slider-items__project-link slider-items__project-link--github" target="_blank" href="https://github.com/AntonOshurek/1810375-kekstagram-24">show code...</a>
                   </p>
-                </div>
-                <img class="slider-items__img" width="500px" height="300px"
+                </article>
+                <img class="slider-items__img" width="500" height="300"
                   srcset="img/portfolio/portfolio__kekstagram.webp"
                   src="img/portfolio/portfolio__kekstagram.jpg"
                   alt="Kekstagram project">
-              </div>
+              </li>
 
-              <div class="slider-items__item">
-                <div>
+              <li class="slider-items__item">
+                <article>
                   <h3 class="slider-items__title">Sedona</h3>
                   <p class="slider-items__text">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -270,15 +269,15 @@
                     <a class="slider-items__project-link slider-items__project-link--page" target="_blank" href="https://antonoshurek.github.io/1810375-sedona-23/">view it...</a>
                     <a class="slider-items__project-link slider-items__project-link--github" target="_blank" href="https://github.com/AntonOshurek/1810375-sedona-23">show code...</a>
                   </p>
-                </div>
-                <img class="slider-items__img" width="500px" height="300px"
+                </article>
+                <img class="slider-items__img" width="500" height="300"
                   srcset="img/portfolio/portfolio__sedona.webp"
                   src="img/portfolio/portfolio__sedona.jpg"
                   alt="Sedona project">
-              </div>
+              </li>
 
-              <div class="slider-items__item">
-                <div>
+              <li class="slider-items__item">
+                <article>
                   <h3 class="slider-items__title">All JavaScript</h3>
                   <p class="slider-items__text">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -291,15 +290,15 @@
                     <a class="slider-items__project-link slider-items__project-link--page" target="_blank" href="https://antonoshurek.github.io/All-JS__landing/">view it...</a>
                     <a class="slider-items__project-link slider-items__project-link--github" target="_blank" href="https://github.com/AntonOshurek/All-JS__landing">show code...</a>
                   </p>
-                </div>
-                <img class="slider-items__img" width="500px" height="300px"
+                </article>
+                <img class="slider-items__img" width="500" height="300"
                   srcset="img/portfolio/portfolio__alljs.webp"
                   src="img/portfolio/portfolio__alljs.jpg"
                   alt="All JavaScript in one page project">
-              </div>
+              </li>
 
-              <div class="slider-items__item">
-                <div>
+              <li class="slider-items__item">
+                <article>
                   <h3 class="slider-items__title">to do list</h3>
                   <p class="slider-items__text">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -312,13 +311,13 @@
                     <a class="slider-items__project-link slider-items__project-link--page" target="_blank" href="https://antonoshurek.github.io/My--ToDoList--JS/">view it...</a>
                     <a class="slider-items__project-link slider-items__project-link--github" target="_blank" href="https://github.com/AntonOshurek/My--ToDoList--JS">show code...</a>
                   </p>
-                </div>
-                <img class="slider-items__img" width="500px" height="300px"
+                </article>
+                <img class="slider-items__img" width="500" height="300"
                   srcset="img/portfolio/portfolio__todolist.webp"
                   src="img/portfolio/portfolio__todolist.jpg"
                   alt="java script to do list project">
-              </div>
-            </div>
+              </li>
+            </ul>
           </div>
         </div>
         <a class="portfolio__all-projects-link" href="portfolio.html" id="portfolio-link">view all projects</a>
@@ -326,10 +325,10 @@
     </section>
     <div class="paralax paralax--footer" id="contact">
       <div class="paralax__blur"></div>
-      <p class="paralax__title" aria-hidden="true"><nobr>Contact Info</nobr></p>
+      <p class="paralax__title" aria-hidden="true">Contact Info</p>
     </div>
   </main>
-  <footer class="footer">
+  <footer class="footer" data-section-name="contact">
     <div class="footer__wrap container">
       <ul class="footer-navigation">
         <li class="footer-navigation__item">
@@ -346,18 +345,18 @@
         </li>
       </ul>
       <address class="footer-contact">
-        <h2 class="footer-contact__title">Contact:</h2>
+        <p class="footer-contact__title">Contact:</p>
         <a class="footer-contact__link" href="mailto:oshurekweb@gmail.com" rel="noreferrer">Email: oshurekweb@gmail.com
           <svg class="footer-contact__icon" width="20" height="20" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
             <use xlink:href="img/sprite.svg#icon__emeil"></use>
           </svg>
         </a>
-        <a class="footer-contact__link" href="https://www.instagram.com/ooshurek/" target="_black" rel="noreferrer">instagram
+        <a class="footer-contact__link" href="https://www.instagram.com/ooshurek/" target="_blank" rel="noreferrer">instagram
           <svg class="footer-contact__icon" width="20" height="20" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
             <use xlink:href="img/sprite.svg#icon__instagram"></use>
           </svg>
         </a>
-        <a class="footer-contact__link" href="https://github.com/AntonOshurek" target="_black" rel="noreferrer">GitHub
+        <a class="footer-contact__link" href="https://github.com/AntonOshurek" target="_blank" rel="noreferrer">GitHub
           <svg class="footer-contact__icon" width="20" height="20" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
             <use xlink:href="img/sprite.svg#icon__github"></use>
           </svg>
