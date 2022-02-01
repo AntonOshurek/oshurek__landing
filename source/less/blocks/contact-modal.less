@@ -22,6 +22,7 @@
   position: fixed;
   z-index: 1;
   width: 70%;
+  max-width: 600px;
   min-height: 400px;
   top: 50%;
   left: 50%;
@@ -48,6 +49,8 @@
   width: 45px;
   height: 45px;
 
+  cursor: pointer;
+
   @media (max-width: @mobile-width) {
     right: 0;
     top: -60px;
@@ -57,6 +60,13 @@
 .contact-modal__close-icon {
   width: 100%;
   height: 100%;
+
+  fill: @standart-white;
+
+  &:hover,
+  &:focus {
+    fill: lighten(@submit-color, 70%);
+  }
 }
 
 .contact-modal__title {
@@ -114,14 +124,14 @@
 
 .contact-form__buttons {
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
 
   @media (max-width: @tablet-width) {
-    justify-content: center;
-    flex-direction: column;
+    grid-template-columns: 1fr;
+    grid-row-gap: 15px;
   }
 }
 
@@ -133,21 +143,36 @@
   font-size: 20px;
   text-transform: uppercase;
   font-family: 'Work Sans', sans-serif;
-  margin-bottom: 15px;
+  cursor: pointer;
+  transition: all .4s ease;
 
   &--submit {
     background-color: @standart-white;
     color: @standart-black;
     font-weight: bold;
-    margin-right: 15px;
+    justify-self: start;
 
-    @media (max-width: @tablet-width) {
-      margin-right: 0;
+    &:hover,
+    &:focus {
+      background-color: @submit-color;
+      color: @standart-white;
     }
   }
 
   &--reset {
-    background-color: #1C1C1C;
+    background-color: @submit-color;
     color: @standart-white;
+    justify-self: end;
+
+    &:hover,
+    &:focus {
+      background-color: @standart-white;
+      color: @standart-black;
+      font-weight: bold;
+    }
+  }
+
+  @media (max-width: @tablet-width) {
+    justify-self: center;
   }
 }
