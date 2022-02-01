@@ -35,7 +35,6 @@ export default function contactMeModal() {
   function closeModal () {
     modal.classList.remove('contact-modal--open');
     body.classList.remove('body--scrolloff');
-
     modalTrigerBtn.focus();
   }
 }
