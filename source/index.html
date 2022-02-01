@@ -39,8 +39,9 @@
             <span class="nav__btn-burger"></span>
           </button>
         </div>
-        <div class="nav__background-notouch"></div>
+
         <div class="nav__list">
+          <div class="nav__background-notouch"></div>
           <ul class="nav__list-wrap">
             <li class="nav__elem">
               <a class="nav__link" href="#hello" data-link-name="hello">Home</a>
@@ -80,17 +81,17 @@
         <div class="hello__pic">
           <div class="hello__pic-wrap">
             <div class="hello__img-scills hello__img-scills--one">
-              <svg  width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+              <svg width="40" height="40" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
                 <use xlink:href="img/sprite.svg#icon-tag"></use>
               </svg>
             </div>
             <div class="hello__img-scills hello__img-scills--two">
-              <svg  width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+              <svg width="40" height="40" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
                 <use xlink:href="img/sprite.svg#icon-json"></use>
               </svg>
             </div>
             <div class="hello__img-scills hello__img-scills--thre">
-              <svg  width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+              <svg width="40" height="40" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
                 <use xlink:href="img/sprite.svg#icon-laptop"></use>
               </svg>
             </div>
@@ -105,7 +106,7 @@
     </section>
     <div class="paralax paralax--stack" id="stack">
       <div class="paralax__blur"></div>
-      <p class="paralax__title" aria-hidden="true">technologies stack</p>
+      <p class="paralax__title" aria-hidden="true" focusable="false">technologies stack</p>
     </div>
     <section class="stack" data-section-name="stack">
       <h2 class="visually-hidden">technologies stack</h2>
@@ -163,7 +164,7 @@
     </section>
     <div class="paralax paralax--about-me" id="about-me">
       <div class="paralax__blur"></div>
-      <p class="paralax__title" aria-hidden="true">about me</p>
+      <p class="paralax__title" aria-hidden="true" focusable="false">about me</p>
     </div>
     <section class="about-me" data-section-name="about-me">
       <h2 class="visually-hidden">about me</h2>
@@ -209,7 +210,7 @@
     </section>
     <div class="paralax paralax--portfolio" id="portfolio">
       <div class="paralax__blur"></div>
-      <p class="paralax__title" aria-hidden="true">Portfolio</p>
+      <p class="paralax__title" aria-hidden="true" focusable="false">Portfolio</p>
     </div>
     <section class="portfolio" data-section-name="portfolio">
       <div class="portfolio__wrap container">
@@ -325,7 +326,7 @@
     </section>
     <div class="paralax paralax--footer" id="contact">
       <div class="paralax__blur"></div>
-      <p class="paralax__title" aria-hidden="true">Contact Info</p>
+      <p class="paralax__title" aria-hidden="true" focusable="false">Contact Info</p>
     </div>
   </main>
   <footer class="footer" data-section-name="contact">
@@ -384,14 +385,14 @@
         </svg>
       </button>
       <h3 class="contact-modal__title">contact me form</h3>
-      <form class="contact-form" action="#" method="post" enctype="multipart/form-data" autocomplete="off">
+      <form class="contact-form" action="sentMeil.php" name="meil-form" method="post" enctype="multipart/form-data" autocomplete="off">
         <label class="contact-form__item">
           <span class="contact-form__item-title">Email</span>
-          <input class="contact-form__input" type="email" placeholder="Email" required>
+          <input class="contact-form__input" type="email" name="emeil" placeholder="Email" required>
         </label>
         <label class="contact-form__item">
           <span class="contact-form__item-title">title</span>
-          <input class="contact-form__input" type="text" placeholder="Email title">
+          <input class="contact-form__input" type="text" name="text" placeholder="Email title">
         </label>
         <textarea class="contact-form__text-input" placeholder="email text" required></textarea>
         <div class="contact-form__buttons">
