@@ -285,6 +285,53 @@ function scrollTopButton() {
 
 /***/ }),
 
+/***/ "./source/scripts/blocks/sent-emeil.js":
+/*!*********************************************!*\
+  !*** ./source/scripts/blocks/sent-emeil.js ***!
+  \*********************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": function() { return /* binding */ sentEmeil; }
+/* harmony export */ });
+function sentEmeil() {
+  const POST_DATA_SOURCE = 'sentMeil.php';
+  const contatForm = document.querySelector('.contact-form');
+
+  const sendData = body => fetch(POST_DATA_SOURCE, {
+    method: 'POST',
+    body
+  }).then(response => {
+    if (response.ok) {
+      return response;
+    }
+
+    throw new Error(`${response.status} ${response.statusText}`);
+  });
+
+  contatForm.addEventListener('submit', evt => {
+    evt.preventDefault();
+    const formData = new FormData(contatForm);
+    const dataArray = {
+      title: formData.get('title'),
+      message: formData.get('text'),
+      emeil: formData.get('emeil')
+    };
+    sendData(dataArray).then(response => {
+      if (response.ok) {
+        console.log(response);
+      }
+    }).catch(() => {
+      console.log(Error);
+    }).finally(() => {
+      console.log('finally');
+    });
+  });
+}
+
+/***/ }),
+
 /***/ "./source/scripts/blocks/set-current-menu-item.js":
 /*!********************************************************!*\
   !*** ./source/scripts/blocks/set-current-menu-item.js ***!
@@ -401,6 +448,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _blocks_contact_me_modal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./blocks/contact-me-modal */ "./source/scripts/blocks/contact-me-modal.js");
 /* harmony import */ var _blocks_scroll_animate_paralax_title__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./blocks/scroll-animate-paralax-title */ "./source/scripts/blocks/scroll-animate-paralax-title.js");
 /* harmony import */ var _blocks_set_current_menu_item__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./blocks/set-current-menu-item */ "./source/scripts/blocks/set-current-menu-item.js");
+/* harmony import */ var _blocks_sent_emeil__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./blocks/sent-emeil */ "./source/scripts/blocks/sent-emeil.js");
+
 
 
 
@@ -421,6 +470,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   if (document.querySelector('.contact-modal')) {
     (0,_blocks_contact_me_modal__WEBPACK_IMPORTED_MODULE_3__["default"])();
+    (0,_blocks_sent_emeil__WEBPACK_IMPORTED_MODULE_6__["default"])();
   }
 
   if (document.querySelector('.footer-copyright__button-top')) {
