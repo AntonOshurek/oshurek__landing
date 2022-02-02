@@ -4,6 +4,7 @@ import scrollTopButton from './blocks/scrollTopButton';
 import contactMeModal from './blocks/contact-me-modal';
 import scrollAnimateParalaxTitle from './blocks/scroll-animate-paralax-title';
 import setCurrentMenuItem from './blocks/set-current-menu-item';
+import sentEmeil from './blocks/sent-emeil';
 
 window.addEventListener('DOMContentLoaded', () => {
   scrollAnimateParalaxTitle();
@@ -19,6 +20,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   if(document.querySelector('.contact-modal')) {
     contactMeModal();
+    sentEmeil();
   }
 
   if(document.querySelector('.footer-copyright__button-top')) {
