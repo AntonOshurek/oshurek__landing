@@ -1,26 +1,25 @@
 <?php
 
+  if (isset((object) $_REQUEST)) {
+    $req = (object) $_REQUEST;
 
+    print json_encode([
+      'title'    => strtoupper($req->title),
+      'text' => strtoupper($req->text),
+      'emeil' => strtoupper($req->emeil)
+    ]);
 
-if (isset($_POST)) {
+    $to = "<oshurekweb@gmail.com>" ;
 
-  print("<br>Email: " . $_POST['emeil']);
-  print("<br>Сообщение: " . $_POST['title']);
-  print("<br>Сообщение: " . $_POST['text']);
+    $subject = strtoupper($req->title);
 
-  $meil = $_POST['emeil'];
+    $message = strtoupper($req->title);
 
-    $to = "<oshurekweb@gmail.com>" ; 
+    $headers  = "Content-type: text/html; charset=windows-1251 \r\n";
+    $headers .= "From: " . strtoupper($req->emeil);
+    $headers .= "Reply-To: reply-to@example.com\r\n";
 
-    $subject = $_POST['title']; 
-
-    $message = $_POST['text'];
-
-    $headers  = "Content-type: text/html; charset=windows-1251 \r\n"; 
-    $headers .= "From: " . $meil; 
-    $headers .= "Reply-To: reply-to@example.com\r\n"; 
-
-    mail($to, $subject, $message, $headers); 
-}
+    mail($to, $subject, $message, $headers);
+  }
 
 ?>

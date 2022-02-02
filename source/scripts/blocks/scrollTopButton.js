@@ -4,5 +4,4 @@ export default function scrollTopButton() {
   topButton.addEventListener('click', () => {
     window.scrollTo(0,0);
   });
-
 }
